@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
+  res.send('Aplicação funcionando!');
+});
+
+app.get('/redirect', (req, res) => {
   const ua = req.headers['user-agent'];
 
   if (/android/i.test(ua)) {
